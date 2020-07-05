@@ -9,7 +9,5 @@ jobs:
       uses: actions/checkout@v2
     - name: Construye imagen
       run: docker build --tag imagenepo .
-    - name: Verifica el formato
-      run: docker run imagenepo make format
     - name: Corre pruebas
       run: docker run imagenepo make tests
