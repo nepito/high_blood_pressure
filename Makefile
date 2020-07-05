@@ -6,3 +6,6 @@ tests: install
 install:
 	R CMD build highBloodPressure
 	R CMD INSTALL highBloodPressure_1.0.tar.gz
+
+clean:
+	rm --force --recursive highBloodPressure_1.0.tar.gz
