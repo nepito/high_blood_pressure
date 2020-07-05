@@ -1,6 +1,6 @@
 .PHONY: tests install
 
-tests:
+tests: install
 	R -e "testthat::test_dir('tests/testthat/', report = 'summary')"
 
 install:
