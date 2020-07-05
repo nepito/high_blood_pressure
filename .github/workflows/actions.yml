@@ -1,0 +1,13 @@
+name: Nepo
+on: [push, pull_request]
+
+jobs:
+  actions:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Copia repositorio
+      uses: actions/checkout@v2
+    - name: Construye imagen
+      run: docker build --tag imagenepo .
+    - name: Corre pruebas
+      run: docker run imagenepo make tests
