@@ -6,5 +6,5 @@ data <- tibble::tibble(
 Blood_Pressure <- highBloodPressure::Data_HP$new()
 Blood_Pressure$set_data(data)
 test_that("La clase pueda cargar los datos", {
-    expect_equal(Blood_Pressure$get_data, data)
+    expect_equal(Blood_Pressure$get_data(), data)
 })
