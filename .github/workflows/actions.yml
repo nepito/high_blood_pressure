@@ -8,8 +8,8 @@ jobs:
     - name: Copia repositorio
       uses: actions/checkout@v2
     - name: Construye imagen
-      run: docker build --tag imagenNepo .
+      run: docker build --tag imagenepo .
     - name: Verifica el formato
-      run: docker run imagenNepo make format
+      run: docker run imagenepo make format
     - name: Corre pruebas
-      run: docker run imagenNepo make tests
+      run: docker run imagenepo make tests
